@@ -40,8 +40,10 @@ from object_detection.models import faster_rcnn_resnet_v1_feature_extractor as f
 from object_detection.models import ssd_resnet_v1_fpn_feature_extractor as ssd_resnet_v1_fpn
 from object_detection.models import ssd_resnet_v1_ppn_feature_extractor as ssd_resnet_v1_ppn
 from object_detection.models.embedded_ssd_mobilenet_v1_feature_extractor import EmbeddedSSDMobileNetV1FeatureExtractor
+from object_detection.models.ssd_aacnn_feature_extractor import SSDAACNNFeatureExtractor
 from object_detection.models.ssd_inception_v2_feature_extractor import SSDInceptionV2FeatureExtractor
 from object_detection.models.ssd_inception_v3_feature_extractor import SSDInceptionV3FeatureExtractor
+from object_detection.models.ssd_inception_v4_feature_extractor import SSDInceptionV4FeatureExtractor
 from object_detection.models.ssd_mobilenet_v1_feature_extractor import SSDMobileNetV1FeatureExtractor
 from object_detection.models.ssd_mobilenet_v1_fpn_feature_extractor import SSDMobileNetV1FpnFeatureExtractor
 from object_detection.models.ssd_mobilenet_v1_keras_feature_extractor import SSDMobileNetV1KerasFeatureExtractor
@@ -57,8 +59,10 @@ from object_detection.utils import ops
 
 # A map of names to SSD feature extractors.
 SSD_FEATURE_EXTRACTOR_CLASS_MAP = {
+    'ssd_aacnn': SSDAACNNFeatureExtractor,
     'ssd_inception_v2': SSDInceptionV2FeatureExtractor,
     'ssd_inception_v3': SSDInceptionV3FeatureExtractor,
+    'ssd_inception_v4': SSDInceptionV4FeatureExtractor,
     'ssd_mobilenet_v1': SSDMobileNetV1FeatureExtractor,
     'ssd_mobilenet_v1_fpn': SSDMobileNetV1FpnFeatureExtractor,
     'ssd_mobilenet_v1_ppn': SSDMobileNetV1PpnFeatureExtractor,

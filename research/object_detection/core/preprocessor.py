@@ -893,7 +893,6 @@ def random_adjust_brightness(image,
 
   Returns:
     image: image which is the same shape as input image.
-    boxes: boxes which is the same shape as input boxes.
   """
   with tf.name_scope('RandomAdjustBrightness', values=[image]):
     generator_func = functools.partial(tf.random_uniform, [],
