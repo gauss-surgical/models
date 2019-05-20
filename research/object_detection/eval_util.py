@@ -357,8 +357,8 @@ def _run_checkpoint_once(tensor_dict,
               image_id=image_id, detections_dict=result_dict)
       tf.logging.info('Running eval batches done.')
     except tf.errors.OutOfRangeError as e:
-      tf.logging.info('Done evaluating -- epoch limit reached')
       import pdb;pdb.set_trace()
+      tf.logging.info('Done evaluating -- epoch limit reached')
     finally:
       # When done, ask the threads to stop.
       tf.logging.info('# success: %d', counters['success'])
