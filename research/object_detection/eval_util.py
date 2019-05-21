@@ -16,7 +16,6 @@
 import collections
 import os
 import re
-import sys
 import time
 
 import numpy as np
@@ -357,8 +356,7 @@ def _run_checkpoint_once(tensor_dict,
           evaluator.add_single_detected_image_info(
               image_id=image_id, detections_dict=result_dict)
       tf.logging.info('Running eval batches done.')
-    except tf.errors.OutOfRangeError as e:
-      import pdb;pdb.set_trace()
+    except tf.errors.OutOfRangeError:
       tf.logging.info('Done evaluating -- epoch limit reached')
     finally:
       # When done, ask the threads to stop.
